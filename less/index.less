@@ -142,7 +142,7 @@ table {
 
 html,
 body {
-	height: 100%;
+	min-height: 100%;
 	font-size: 62.5%;
 }
 
@@ -150,10 +150,12 @@ body {
 @xl: 5rem;
 @l: 4rem;
 @m: 3rem;
-@s: 1.6rem;
+@s: 2.5rem;
 @xs: 1.2rem;
-@header-text: #393939;
-@small-text:#191919;
+@headfont1: Arial, Helvetica, san-serif;
+@dark: #393939;
+@darker:#191919;
+@lightbackground: whitesmoke;
 
 //MIXINS
 .gradient {
@@ -166,8 +168,28 @@ body {
 	align-items: @align;
 }
 
+.h2SizeAndFont {
+	font-size: @xl;
+	font-family: @headfont1;
+	margin-bottom: 5rem;
+}
+
+.sectionStyle {
+	.flexMixin(center, flex-start);
+	margin-top: 5rem;
+	background: @lightbackground;
+	padding: 2rem;
+	margin: 5rem;
+	border-radius: 1rem;
+}
+
+// ================================= //	CONTENT
+// ================================= 
+
 body {
 	.gradient;
+	background-repeat: no-repeat;
+}
 
 	header {
 		width: 100%;
@@ -179,19 +201,143 @@ body {
 			.flexMixin(space-around, center);
 
 			h1 {
-				font-family: Arial, Helvetica, sans-serif;
-				color: @header-text;
+				font-family: @headfont1;
+				color: @dark;
 				font-weight: bold;
 			}
 
 			a {
 				font-size: @m;
-				color: @small-text;
+				color: @darker;
 				text-decoration: none;
-				font-family: sans-serif;
+				font-family: @headfont1;
+				padding: .5rem;
 			}
 
 		}
-
+		a:hover {
+			animation-name: buttonChange;
+			animation-duration: .2s;
+			animation-fill-mode: forwards;
+		}
 	}
+
+.intro {
+	.flexMixin(center, flex-start);
+	margin-top: 5rem;
+	background: @lightbackground;
+	padding: 2rem;
+	margin: 5rem;
+	border-radius: 1rem;
+
+	img {
+		max-width: 80rem;
+		max-height: 60vh;
+		border-radius: 3rem;
+	}
+
+	div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 60rem;
+		margin: 0 2rem;
+		
+		h2 {
+			.h2SizeAndFont;
+		}
+		
+		p {
+			font-size: @s;
+			line-height: 1.2;
+			margin-bottom: 5rem;
+		}
+		a {
+			align-self: flex-start;
+			font-size: @m;
+			background: @lightbackground;
+			padding: 1rem;
+			border-radius: .3rem;
+			color: @dark;
+			text-decoration: none;
+			font-family: @headfont1;
+			border: .3rem solid #000;
+
+		}
+
+		@keyframes buttonChange {
+			from {}
+			to {
+				background: #fae;
+				box-shadow: -4px 4px @dark;
+			}
+			
+		}
+		a:hover {
+			animation-name: buttonChange;
+			animation-duration: .3s;
+			animation-fill-mode: forwards;
+		}
+
+		.buttons {
+			width: 80%;
+			margin-left: 0;
+			align-self: flex-start;
+			flex-direction: row;
+			.flexMixin(space-between, center);
+		}
+	}
+}
+
+.skills {
+	.flexMixin(space-around, center);
+	margin-top: 5rem;
+	background: @lightbackground;
+	padding: 2rem;
+	margin: 5rem;
+	border-radius: 1rem;
+
+	h2 {
+		.h2SizeAndFont;
+	}
+	.firstP {
+		border-bottom: 1px solid #000;
+		padding-bottom: 1rem;
+	}
+	p {
+		font-size: @s;
+		max-width: 60rem;
+		line-height: 1.2;
+		margin: 1rem 2rem 1rem 0;
+	}
+	.skillsimg {
+		margin-left: 0;
+		img {
+			max-width: 50rem;
+			border-radius: 4rem;
+		}
+	}
+}
+
+.workHistory {
+	.sectionStyle;
+	flex-direction: column;
+	h2 {
+		.h2SizeAndFont;
+	}
+	.one {
+		.flexMixin(space-around, center);
+		font-size: @s;
+		max-width: 60rem;
+		margin: 1rem 2rem 1rem 0;
+		background: #12121212;
+		div {
+			margin: 0 2rem;
+		}
+	}
+}
+span {
+	font-family: @headfont1;
+	font-weight: bold;
 }

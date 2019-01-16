@@ -132,34 +132,184 @@ table {
 }
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   font-size: 62.5%;
 }
 .gradient {
   background-image: linear-gradient(to bottom, rgba(158, 193, 233, 0.685), rgba(178, 221, 221, 0.308));
 }
+.h2SizeAndFont {
+  font-size: 5rem;
+  font-family: Arial, Helvetica, san-serif;
+  margin-bottom: 5rem;
+}
+.sectionStyle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5rem;
+  background: whitesmoke;
+  padding: 2rem;
+  margin: 5rem;
+  border-radius: 1rem;
+}
 body {
   background-image: linear-gradient(to bottom, rgba(158, 193, 233, 0.685), rgba(178, 221, 221, 0.308));
+  background-repeat: no-repeat;
 }
-body header {
+header {
   width: 100%;
   background: #f2f4f7;
   padding: 2rem;
 }
-body header nav {
+header nav {
   font-size: 4rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-body header nav h1 {
-  font-family: Arial, Helvetica, sans-serif;
+header nav h1 {
+  font-family: Arial, Helvetica, san-serif;
   color: #393939;
   font-weight: bold;
 }
-body header nav a {
+header nav a {
   font-size: 3rem;
   color: #191919;
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, san-serif;
+  padding: 0.5rem;
+}
+header a:hover {
+  animation-name: buttonChange;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5rem;
+  background: whitesmoke;
+  padding: 2rem;
+  margin: 5rem;
+  border-radius: 1rem;
+}
+.intro img {
+  max-width: 80rem;
+  max-height: 60vh;
+  border-radius: 3rem;
+}
+.intro div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 60rem;
+  margin: 0 2rem;
+}
+.intro div h2 {
+  font-size: 5rem;
+  font-family: Arial, Helvetica, san-serif;
+  margin-bottom: 5rem;
+}
+.intro div p {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 5rem;
+}
+.intro div a {
+  align-self: flex-start;
+  font-size: 3rem;
+  background: whitesmoke;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: #393939;
+  text-decoration: none;
+  font-family: Arial, Helvetica, san-serif;
+  border: 0.3rem solid #000;
+}
+@keyframes buttonChange {
+  to {
+    background: #fae;
+    box-shadow: -4px 4px #393939;
+  }
+}
+.intro div a:hover {
+  animation-name: buttonChange;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.intro div .buttons {
+  width: 80%;
+  margin-left: 0;
+  align-self: flex-start;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5rem;
+  background: whitesmoke;
+  padding: 2rem;
+  margin: 5rem;
+  border-radius: 1rem;
+}
+.skills h2 {
+  font-size: 5rem;
+  font-family: Arial, Helvetica, san-serif;
+  margin-bottom: 5rem;
+}
+.skills .firstP {
+  border-bottom: 1px solid #000;
+  padding-bottom: 1rem;
+}
+.skills p {
+  font-size: 2.5rem;
+  max-width: 60rem;
+  line-height: 1.2;
+  margin: 1rem 2rem 1rem 0;
+}
+.skills .skillsimg {
+  margin-left: 0;
+}
+.skills .skillsimg img {
+  max-width: 50rem;
+  border-radius: 4rem;
+}
+.workHistory {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5rem;
+  background: whitesmoke;
+  padding: 2rem;
+  margin: 5rem;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+.workHistory h2 {
+  font-size: 5rem;
+  font-family: Arial, Helvetica, san-serif;
+  margin-bottom: 5rem;
+}
+.workHistory .one {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2.5rem;
+  max-width: 60rem;
+  margin: 1rem 2rem 1rem 0;
+  background: #12121212;
+}
+.workHistory .one div {
+  margin: 0 2rem;
+}
+span {
+  font-family: Arial, Helvetica, san-serif;
+  font-weight: bold;
 }
