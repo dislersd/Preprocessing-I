@@ -133,10 +133,33 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
 }
 .gradient {
-  background-image: linear-gradient(to right, lightcoral, lightgreen);
+  background-image: linear-gradient(to bottom, rgba(158, 193, 233, 0.685), rgba(178, 221, 221, 0.308));
 }
 body {
-  background-image: linear-gradient(to right, lightcoral, lightgreen);
+  background-image: linear-gradient(to bottom, rgba(158, 193, 233, 0.685), rgba(178, 221, 221, 0.308));
+}
+body header {
+  width: 100%;
+  background: #f2f4f7;
+  padding: 2rem;
+}
+body header nav {
+  font-size: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body header nav h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #393939;
+  font-weight: bold;
+}
+body header nav a {
+  font-size: 3rem;
+  color: #191919;
+  text-decoration: none;
+  font-family: sans-serif;
 }
