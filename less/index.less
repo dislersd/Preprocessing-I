@@ -199,6 +199,10 @@ body {
 		nav {
 			font-size: @l;
 			.flexMixin(space-around, center);
+
+			@media (max-width: 680px) {
+				flex-direction: column;
+			}
 			@media (max-width: 500px) {
 				flex-direction: column;
 			}
