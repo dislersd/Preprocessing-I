@@ -249,6 +249,11 @@ header a:hover {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 970px) {
+  .intro img {
+    display: none;
+  }
+}
 .skills {
   display: flex;
   justify-content: space-around;
@@ -280,6 +285,11 @@ header a:hover {
 .skills .skillsimg img {
   max-width: 50rem;
   border-radius: 4rem;
+}
+@media (max-width: 850px) {
+  .skills img {
+    display: none;
+  }
 }
 .workHistory {
   display: flex;
