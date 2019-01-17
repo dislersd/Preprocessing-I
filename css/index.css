@@ -140,7 +140,7 @@ body {
 }
 .h2SizeAndFont {
   font-size: 5rem;
-  font-family: Arial, Helvetica, san-serif;
+  font-family: Coiny, Arial, Helvetica, san-serif;
   margin-bottom: 5rem;
 }
 .sectionStyle {
@@ -179,7 +179,7 @@ header nav {
   }
 }
 header nav h1 {
-  font-family: Arial, Helvetica, san-serif;
+  font-family: Coiny, Arial, Helvetica, san-serif;
   color: #393939;
   font-weight: bold;
 }
@@ -195,7 +195,7 @@ header nav a {
   font-size: 3rem;
   color: #191919;
   text-decoration: none;
-  font-family: Arial, Helvetica, san-serif;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 0.5rem;
 }
 @media (max-width: 500px) {
@@ -243,7 +243,7 @@ header a:hover {
 }
 .intro div h2 {
   font-size: 5rem;
-  font-family: Arial, Helvetica, san-serif;
+  font-family: Coiny, Arial, Helvetica, san-serif;
   margin-bottom: 5rem;
 }
 .intro div p {
@@ -259,7 +259,7 @@ header a:hover {
   border-radius: 0.3rem;
   color: #393939;
   text-decoration: none;
-  font-family: Arial, Helvetica, san-serif;
+  font-family: Coiny, Arial, Helvetica, san-serif;
   border: 0.3rem solid #000;
 }
 @keyframes buttonChange {
@@ -321,7 +321,7 @@ header a:hover {
 }
 .skills h2 {
   font-size: 5rem;
-  font-family: Arial, Helvetica, san-serif;
+  font-family: Coiny, Arial, Helvetica, san-serif;
   margin-bottom: 5rem;
 }
 .skills .firstP {
@@ -366,7 +366,7 @@ header a:hover {
 }
 .workHistory h2 {
   font-size: 5rem;
-  font-family: Arial, Helvetica, san-serif;
+  font-family: Coiny, Arial, Helvetica, san-serif;
   margin-bottom: 5rem;
 }
 .workHistory .one {
@@ -383,6 +383,6 @@ header a:hover {
   margin: 1rem 2rem;
 }
 .workHistory .one div span {
-  font-family: Arial, Helvetica, san-serif;
+  font-family: Coiny, Arial, Helvetica, san-serif;
   font-weight: bold;
 }
