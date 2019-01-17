@@ -183,7 +183,6 @@ body {
 	border-radius: 1rem;
 }
 
-// ================================= //	CONTENT
 // ================================= 
 
 body {
@@ -195,15 +194,25 @@ body {
 		width: 100%;
 		background: #f2f4f7;
 		padding: 2rem;
-
+		
+		
 		nav {
 			font-size: @l;
 			.flexMixin(space-around, center);
+			@media (max-width: 500px) {
+				flex-direction: column;
+			}
 
 			h1 {
 				font-family: @headfont1;
 				color: @dark;
 				font-weight: bold;
+				@media (max-width: 500px) {
+					border-bottom: 1px solid #000;
+					width: 100%;
+					text-align: center;
+					padding: 2rem;
+				}
 			}
 
 			a {
@@ -212,6 +221,12 @@ body {
 				text-decoration: none;
 				font-family: @headfont1;
 				padding: .5rem;
+				@media (max-width: 500px) {
+					width: 100%;
+					border-bottom: 1px solid #000;
+					text-align: center;
+					padding: 1rem;
+				}
 			}
 
 		}
@@ -223,6 +238,11 @@ body {
 	}
 
 .intro {
+	@media (max-width: 500px) {
+		width: 100%;
+		min-width: 100%;
+		margin: 2rem 0;
+	}
 	.flexMixin(center, flex-start);
 	margin-top: 5rem;
 	background: @lightbackground;
@@ -286,6 +306,19 @@ body {
 			align-self: flex-start;
 			flex-direction: row;
 			.flexMixin(space-between, center);
+			@media (max-width: 500px) {
+				width: 100%;
+				flex-direction: column-reverse;
+				align-items: center;
+				align-self: none;
+				justify-content: center;
+				margin: 0;
+			}
+			a {
+				margin: 1rem;
+				text-align: center;
+				white-space: nowrap;
+			}
 		}
 	}
 	@media (max-width: 970px) {
@@ -296,6 +329,11 @@ body {
 }
 
 .skills {
+	@media (max-width: 500px) {
+		width: 100%;
+		min-width: 100%;
+		margin: 2rem 0;
+	}
 	.flexMixin(space-around, center);
 	margin-top: 5rem;
 	background: @lightbackground;
@@ -331,23 +369,30 @@ body {
 }
 
 .workHistory {
+	@media (max-width: 500px) {
+		width: 100%;
+		min-width: 100%;
+		margin: 0;
+	}
 	.sectionStyle;
 	flex-direction: column;
 	h2 {
 		.h2SizeAndFont;
 	}
 	.one {
-		.flexMixin(space-around, center);
+		.flexMixin(center, center);
 		font-size: @s;
 		max-width: 60rem;
-		margin: 1rem 2rem 1rem 0;
+		min-width: 100%;
 		background: #12121212;
+		width: 100%;
 		div {
-			margin: 0 2rem;
+			margin: 1rem 2rem;
+			span {
+				font-family: @headfont1;
+				font-weight: bold;
+			}
 		}
 	}
 }
-span {
-	font-family: @headfont1;
-	font-weight: bold;
-}
+

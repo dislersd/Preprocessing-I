@@ -168,10 +168,23 @@ header nav {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+  }
+}
 header nav h1 {
   font-family: Arial, Helvetica, san-serif;
   color: #393939;
   font-weight: bold;
+}
+@media (max-width: 500px) {
+  header nav h1 {
+    border-bottom: 1px solid #000;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+  }
 }
 header nav a {
   font-size: 3rem;
@@ -179,6 +192,14 @@ header nav a {
   text-decoration: none;
   font-family: Arial, Helvetica, san-serif;
   padding: 0.5rem;
+}
+@media (max-width: 500px) {
+  header nav a {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    padding: 1rem;
+  }
 }
 header a:hover {
   animation-name: buttonChange;
@@ -194,6 +215,13 @@ header a:hover {
   padding: 2rem;
   margin: 5rem;
   border-radius: 1rem;
+}
+@media (max-width: 500px) {
+  .intro {
+    width: 100%;
+    min-width: 100%;
+    margin: 2rem 0;
+  }
 }
 .intro img {
   max-width: 80rem;
@@ -249,6 +277,21 @@ header a:hover {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .intro div .buttons {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    align-self: none;
+    justify-content: center;
+    margin: 0;
+  }
+}
+.intro div .buttons a {
+  margin: 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
 @media (max-width: 970px) {
   .intro img {
     display: none;
@@ -263,6 +306,13 @@ header a:hover {
   padding: 2rem;
   margin: 5rem;
   border-radius: 1rem;
+}
+@media (max-width: 500px) {
+  .skills {
+    width: 100%;
+    min-width: 100%;
+    margin: 2rem 0;
+  }
 }
 .skills h2 {
   font-size: 5rem;
@@ -302,6 +352,13 @@ header a:hover {
   border-radius: 1rem;
   flex-direction: column;
 }
+@media (max-width: 500px) {
+  .workHistory {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+  }
+}
 .workHistory h2 {
   font-size: 5rem;
   font-family: Arial, Helvetica, san-serif;
@@ -309,17 +366,18 @@ header a:hover {
 }
 .workHistory .one {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-size: 2.5rem;
   max-width: 60rem;
-  margin: 1rem 2rem 1rem 0;
+  min-width: 100%;
   background: #12121212;
+  width: 100%;
 }
 .workHistory .one div {
-  margin: 0 2rem;
+  margin: 1rem 2rem;
 }
-span {
+.workHistory .one div span {
   font-family: Arial, Helvetica, san-serif;
   font-weight: bold;
 }
